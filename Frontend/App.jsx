@@ -1,14 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ShortenerForm from './components/ShortenerForm';
-import StatsPage from './components/StatsPage';
+import React from "react";
+import ShortenerForm from "./components/ShortenerForm"; 
 
-export default function App() {
+function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<ShortenerForm />} />
-        <Route path="/stats" element={<StatsPage />} />
-      </Routes>
-    </Router>
+    <div>
+      <ShortenerForm />
+    </div>
   );
 }
+
+export default App;

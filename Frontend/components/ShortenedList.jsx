@@ -8,7 +8,7 @@ const handleSubmit = async () => {
         validity: parseInt(item.validity),
         shortcode: item.shortcode || undefined,
       };
-      const res = await axios.post("http://localhost:5000/shorturls", payload); // <-- API call
+      const res = await axios.post("http://localhost:5000/shorturls", payload); 
       responseList.push(res.data);
       logEvent(`Shortened URL created for ${item.url}`);
     }
