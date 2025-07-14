@@ -8,7 +8,7 @@ export const createShortUrl = (req, res, next) => {
       throw { statusCode: 400, message: "Invalid URL" };
     }
 
-    let code = shortcode || generateShortcode();
+    let code = shortcode || generatecode();
 
     if (urlDatabase.has(code)) {
       throw { statusCode: 409, message: "Shortcode already in use" };
